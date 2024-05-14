@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div [style.background-image]="'url(' + imgUrl + ')'" class="labeling-banner slider-image slider-height centered"
+style="background-repeat: no-repeat; background-size: cover;">
+  <h2>{{pageTitle}}</h2>
+</div>
+<div class="bg-white p-5">
+  <h4 *ngIf="this.products == 'No Data Found'">No Data Found</h4>
+  <div *ngIf="this.products != 'No Data Found'">
+    <div class="p-2 text-center mt-3">
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search products..."
+          [(ngModel)]="searchTerm"
+          (input)="filterProducts()"
+        />
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1" *ngFor="let product of filteredData">
+          <div class="card p-4">
+            <img src="{{config.imgUrl + product.main_image}}" class="img-fluid example-card" alt="Image" />
+            <div class="card-body">
+              <h4>
+                {{product.name}}
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

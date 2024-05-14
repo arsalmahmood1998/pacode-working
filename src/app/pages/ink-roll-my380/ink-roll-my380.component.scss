@@ -1,0 +1,42 @@
+.labeling-banner {
+  position: relative;
+  background-image: url("/assets/images/home-banner-three.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.slider-height {
+  height: 60vh;
+}
+
+.centered h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.centered h4 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+}
+.card-background {
+  background-color: #7C7C7C;
+  padding: 2rem;
+  // height: 100%;
+  cursor: pointer;
+}
+.margin{
+  margin-top: 130px;
+}
+.example-card {
+  height: 250px;
+  // width: 100%;
+  // object-fit: contain;
+}

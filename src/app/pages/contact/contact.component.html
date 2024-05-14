@@ -1,0 +1,107 @@
+<app-navbar></app-navbar>
+<div class="contact-banner slider-image slider-height centered">
+  <h2>Contact</h2>
+</div>
+<div class="bg-white">
+  <div class="p-5">
+
+    <h4 class="mb-5">Contact PACODE Systems</h4>
+    <!-- <p>
+      PACODE Systems GmbH is the headquarter of the European subsidiaries and
+      was founded in 1980. As a company being experienced in developing,
+      producing and selling highly efficient labeling, marking and coding
+      systems for industrial marking, Weber provides its products to all
+      branches.
+    </p>
+    <p>
+      Sales includes labeling equipment, inkjet printers and software as well as
+      a world-wide company network for direct selling, service and technical
+      support. In Germany we have a great labels production for custom and stock
+      labels.
+    </p> -->
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-card">
+      <h2><strong>Contact Us</strong></h2>
+      <div class="row p-5">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="form-group mt-2">
+            <label for="" class="pb-2">Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter name"
+              formControlName="name" [ngClass]="{ 'is-invalid': submitted && f['name'].errors }" />
+            <div *ngIf="submitted &&  f['name'].errors" class="invalid-feedback">
+              <div *ngIf=" f['name'].errors['required']">Name is required</div>
+            </div>
+          </div>
+          <div class="form-group mt-2">
+            <label for="" class="pb-2">Company</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Company"
+              formControlName="company_name" />
+          </div>
+          <div class="form-group mt-2">
+            <label for="" class="pb-2">Street No.</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Street No."
+              formControlName="street_no" />
+          </div>
+          <div class="form-group mt-2">
+            <label for="exampleInputEmail1" class="pb-2">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter email" formControlName="email"
+              [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+            <div *ngIf="submitted &&  f['email'].errors" class="invalid-feedback">
+              <div *ngIf=" f['email'].errors['required']">Email is required</div>
+            </div>
+            <div *ngIf="submitted &&  f['email'].errors" class="invalid-feedback">
+              <div *ngIf=" f['email'].errors['required']">Invalid Email</div>
+            </div>
+          </div>
+          <div class="form-group mt-2">
+            <label for="" class="pb-2">Country</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter country"
+              formControlName="country" [ngClass]="{ 'is-invalid': submitted && f['country'].errors }" />
+            <div *ngIf="submitted &&  f['country'].errors" class="invalid-feedback">
+              <div *ngIf=" f['country'].errors['required']">Country is required</div>
+            </div>
+          </div>
+          <div class="form-group mt-2">
+            <label for="" class="pb-2">Job Title</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter job title"
+              formControlName="job_title" />
+          </div>
+          <div class="form-group mt-2">
+            <label for="" class="pb-2">ZIP,City</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter ZIP,City"
+              formControlName="zip_city" [ngClass]="{ 'is-invalid': submitted && f['zip_city'].errors }" />
+            <div *ngIf="submitted &&  f['zip_city'].errors" class="invalid-feedback">
+              <div *ngIf=" f['zip_city'].errors['required']">Zip,City is required</div>
+            </div>
+          </div>
+          <div class="form-group mt-2">
+            <label for="exampleInputEmail1" class="pb-2">Phone</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter phone" formControlName="phone"
+              [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }" />
+            <div *ngIf="submitted &&  f['phone'].errors" class="invalid-feedback">
+              <div *ngIf=" f['phone'].errors['required']">Phone is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="form-group mt-2">
+            <label for="exampleFormControlTextarea1" class="pb-2">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="20" formControlName="message"
+              [ngClass]="{ 'is-invalid': submitted && f['message'].errors }"></textarea>
+            <div *ngIf="submitted &&  f['message'].errors" class="invalid-feedback">
+              <div *ngIf=" f['message'].errors['required']">Message is required</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 text-center">
+        <button type="submit" class="btn btn-danger w-40">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-footer></app-footer>

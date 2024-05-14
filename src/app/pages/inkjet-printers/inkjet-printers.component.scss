@@ -1,0 +1,122 @@
+.labeling-banner {
+  position: relative;
+}
+
+.slider-height {
+  height: 60vh;
+}
+
+.centered h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.centered h4 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+}
+
+.hp {
+  width: 120px;
+  height: 80px;
+}
+
+.card-background {
+  background-color: #7C7C7C;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.card-background-iq {
+  background-color: #7C7C7C;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.card-background-smaller {
+  background-color: #7C7C7C;
+  padding: 2rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+.example-card {
+  height: 10em;
+  width: 100%;
+  object-fit: contain;
+}
+
+.example-list-wrapping {
+  max-width: 500px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-option {
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.menu-option:hover{
+  background-color: #313131;
+  color: white;
+  border-radius: 15px;
+}
+
+.menu-option.selected {
+  background-color: #313131;
+  color: white;
+  border-radius: 15px;
+}
+
+.indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #313131;
+  transition: left 0.3s ease;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .hp {
+    width: 60px;
+    height: 40px;
+
+  }
+
+  .marko {
+    width: 200px;
+    height: 70px;
+    ;
+  }
+
+  .centered h4 {
+    top: 65%;
+  }
+
+}
+
+
+
+

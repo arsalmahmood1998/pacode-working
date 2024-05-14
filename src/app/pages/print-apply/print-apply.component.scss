@@ -1,0 +1,45 @@
+.labeling-banner {
+  position: relative;
+}
+
+.slider-height {
+  height: 60vh;
+}
+
+.centered h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.centered h4 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.example-card {
+  height: 15em;
+  width: 100%;
+  object-fit: contain;
+}
+
+.card-background {
+  background-color: #7C7C7C;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .centered h4 {
+    top: 65%;
+  }
+  .card-background {
+    background-color: #7C7C7C;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,215 @@
+@import 'ngx-toastr/toastr';
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url(./assets/fonts/spaceGrotesk/SpaceGrotesk-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url(./assets/fonts/SpaceMono/SpaceMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./assets/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Nunito-Regular';
+  src: url(./assets/fonts/Nunito/Nunito-Regular.ttf);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* You can add global styles to this file, and also import other style files */
+.background {
+  background-color: #313131;
+  color: white;
+
+}
+
+.bg-white {
+  background-color: white;
+  color: #313131;
+}
+
+.bg-gray {
+  background-color: #7C7C7C;
+  color: white;
+}
+
+* {
+  font-family: 'Montserrat';
+}
+
+.space-mono {
+  font-family: 'Space Mono';
+}
+
+.white-color {
+  color: #fff;
+}
+
+.bold-font{
+  font-weight: bold;
+}
+
+.company-logo {
+  height: 12em;
+  width: 100%;
+  object-fit: contain;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-container input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  border: 1px solid #313131;
+}
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.nav-background {
+  background-color: #cc3333;
+  color: white;
+}
+
+
+.hover:hover {
+  color: #cc3333;
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: #313131 !important;
+  border: 1px solid #313131 !important;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #cc3333 !important;
+  border: 1px solid #cc3333 !important;
+  color: white;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.fill {
+  object-fit: fill;
+}
+
+.logo {
+  width: 10em;
+  height: 5em;
+  object-fit: contain;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  /* Dark shadow color */
+  background-color: #313131 !important;
+  border: 1px solid #313131 !important;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
+.card-white {
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  /* Dark shadow color */
+  background-color: white !important;
+  border: 1px solid white !important;
+  color: #313131 !important;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.slider-image {
+  height: 35em;
+  width: 100%;
+}
+
+.container-brand {
+  max-width: 100%; /* Ensures the container div does not exceed the width of its parent */
+  overflow: hidden; /* Ensures the image does not overflow its container */
+}
+
+.responsive-image {
+  align-self: center;/* Ensures the image behaves like a block element */
+  max-width: 100%; /* Ensures the image does not exceed the width of its container */
+  height: 12em; /* Allows the image's height to adjust proportionally with its width */
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 25px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  h4 {
+    font-size: 15px !important;
+  }
+
+  h5 {
+    font-size: 12px !important;
+  }
+
+
+  .slider-text {
+    font-size: 15px !important;
+  }
+
+  .overflow-horizontal {
+    overflow: scroll;
+  }
+
+  .slider-image {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+  .slider-image {
+    width: 100%;
+  }
+}

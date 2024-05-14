@@ -1,0 +1,188 @@
+<app-navbar></app-navbar>
+<div
+  [style.background-image]="'url(' + imgUrl + ')'"
+  class="labeling-banner slider-image slider-height centered"
+  style="background-repeat: no-repeat; background-size: cover;"
+>
+  <h2> {{this.slideName}} {{ slides.image_heading }}</h2>
+  <h4>{{ slides.image_para }}</h4>
+</div>
+<div class="bg-white">
+  <div class="background p-5">
+    <p>
+      Look forward to better print results and increased uptime! Our industrial
+      inkjet printers distinguish themselves from other labeling systems through
+      exceptionally high efficiency and innovative features. With our wide range
+      of printing systems and technologies, Markoprint coding solutions meet
+      every system environment and customer requirement. Whether large or small
+      fonts, high-speed applications in pharmaceutical or automotive industries,
+      rough industrial environments, we offer the right system for every
+      application. The best materials, the most innovative ideas, this is
+      Quality made in Germany. Our developments result in first-class, highly
+      complex solutions that are still extremely easy to use. Aluminium is our
+      preferred product material, preferably made of one piece. A guarantor for
+      durability, sustainability and your success!
+    </p>
+    <div class="text-center" style="background-color: white; color: black">
+      <img class="marko" src="assets/images/markoprint.png" alt="" />
+      <h4 class="mt-3">
+        Compatible with world's leading printing technologies
+      </h4>
+      <p>
+        As the only manufacturer in the world, Markoprint can control five
+        proven printing technologies:
+      </p>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 p-2">
+          <img class="hp" src="assets/images/hp-class.png" alt="" />
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 p-2">
+          <img class="hp" src="assets/images/lx-class.png" alt="" />
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 p-2">
+          <img class="hp" src="assets/images/mx-class.png" alt="" />
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 p-2">
+          <img class="hp" src="assets/images/pp-class.png" alt="" />
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 p-2">
+          <img class="hp" src="assets/images/xr-class.png" alt="" />
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" bg-white container text-center">
+    <img [src]="brand" alt="Responsive Image" class="responsive-image">
+  </div>
+
+  <div class="menu p-5">
+    <div class="menu-option " (click)="selectOption(1)" [class.selected]="selectedOption === 1">Markoprint Premium Systems</div>
+    <div class="menu-option" (click)="selectOption(2)" [class.selected]="selectedOption === 2">Markoprint Professional Systems</div>
+    <div class="menu-option" (click)="selectOption(3)" [class.selected]="selectedOption === 3">Markoprint Standard Systems</div>
+    <div class="menu-option" (click)="selectOption(4)" [class.selected]="selectedOption === 4">Markoprint "IQ" System Extensions</div>
+    <div class="indicator" [style.left.%]="indicatorLeft"></div>
+  </div>
+
+  <div class="container p-2 text-center mt-3" *ngIf="selectedOption == 1">
+    <!-- <h2>Markoprint Premium Systems</h2>
+    <h5>Pinpoint solutions for demanding applications:</h5> -->
+    <div class="row" *ngIf="markoprintPremiumSystems != 'No Data Found'">
+      <div
+        class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1"
+        *ngFor="let printer of markoprintPremiumSystems"
+      >
+        <div class="card p-4 cursor" (click)="goToPremiumSystems(printer.id)">
+          <img
+            src="{{ config.imgUrl + printer.main_image }}"
+            class="img-fluid example-card"
+            alt="Image"
+          />
+          <div class="card-body hover">
+            <h3>
+              {{ printer.name }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center" *ngIf="markoprintPremiumSystems == 'No Data Found'">
+      <h5>No Products Found</h5>
+    </div>
+  </div>
+
+
+  <div class="container p-2 text-center mt-3" *ngIf="selectedOption == 2">
+    <!-- <h2>Markoprint Professional Systems</h2>
+    <h5>Key players for industrial marking and coding:</h5> -->
+    <div class="row" *ngIf="markoprintProfessionalSystems != 'No Data Found'">
+      <div
+        class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1"
+        *ngFor="let printer of markoprintProfessionalSystems"
+      >
+        <div
+          class="card p-4 cursor"
+          (click)="goToProfessionalSystems(printer.id)"
+        >
+          <img
+            src="{{ config.imgUrl + printer.main_image }}"
+            class="img-fluid example-card"
+            alt="Image"
+          />
+          <div class="card-body hover">
+            <h3>
+              {{ printer.name }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center" *ngIf="markoprintProfessionalSystems == 'No Data Found'">
+      <h5>No Products Found</h5>
+    </div>
+  </div>
+
+  <div class="container p-2 text-center mt-3" *ngIf="selectedOption == 3">
+    <!-- <h2>Markoprint Standard Systems</h2>
+    <h5>Your perfect start into professional marking and coding:</h5> -->
+    <div class="row" *ngIf="markoprintStandardSystems != 'No Data Found'">
+      <div
+        class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1"
+        *ngFor="let printer of markoprintStandardSystems"
+      >
+        <div class="card p-4 cursor" (click)="goToStandardSystems(printer.id)">
+          <img
+            src="{{ config.imgUrl + printer.main_image }}"
+            class="img-fluid example-card"
+            alt="Image"
+          />
+          <div class="card-body hover">
+            <h3>
+              {{ printer.name }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center" *ngIf="markoprintStandardSystems == 'No Data Found'">
+      <h5>No Products Found</h5>
+    </div>
+  </div>
+
+  <div class="container p-2 text-center mt-3" *ngIf="selectedOption == 4">
+    <!-- <h2>Markoprint "IQ" System Extensions</h2>
+    <h5>We'll help you exceed limits:</h5> -->
+    <div class="row" *ngIf="markoprintIqSystemExtensions != 'No Data Found'">
+      <div
+        class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1"
+        *ngFor="let printer of markoprintIqSystemExtensions"
+      >
+        <div
+          class="card p-4 cursor"
+          (click)="goToIQSystemExtensions(printer.id)"
+        >
+          <img
+            src="{{ config.imgUrl + printer.main_image }}"
+            class="img-fluid example-card"
+            alt="Image"
+          />
+          <div class="card-body hover">
+            <h3>
+              {{ printer.name }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center" *ngIf="markoprintIqSystemExtensions == 'No Data Found'">
+      <h5>No Products Found</h5>
+    </div>
+  </div>
+
+  <div class="p-5 mt-3">
+    <div [innerHTML]="benefits"></div>
+  </div>
+</div>
+<app-footer></app-footer>

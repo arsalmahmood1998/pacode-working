@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-dark background-grey navbar-custom">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold" [routerLink]="['/home']">
+      <img class="img-fluid logo" src="assets/images/logo.png" alt="" />
+    </a>
+
+    <!-- Email Info -->
+    <button
+      (click)="isCollapsed = !isCollapsed"
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarSupportedContent"
+      [ngbCollapse]="isCollapsed"
+      
+    >
+      <!-- Navigation Menu -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Your navigation links here -->
+        <li class="nav-item" >
+          <a
+            class="nav-link active large-text"
+            aria-current="page"
+            [routerLink]="['/home']"
+          >Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle cursor large-text"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Products
+          </a>
+          <ul
+            class="dropdown-menu"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <li class="dropdown-submenu" *ngFor="let category of categories">
+              <a class="dropdown-item dropdown-toggle cursor" (click)="goToComingSoon(category.id)">{{category.name}}</a>
+              <ul class="dropdown-menu" *ngIf="hasSubCategories(category.id)">
+                <li *ngFor="let subCategory of subCategories">
+                  <a
+                    *ngIf="category.id == subCategory.category_id"
+                    class="dropdown-item cursor"
+                    (click)="goToProductCategories(category.id,subCategory.id)"
+                  >{{subCategory.name}}</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active large-text"
+            aria-current="page"
+            [routerLink]="['/about-us']"
+          >About</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active large-text"
+            aria-current="page"
+            [routerLink]="['/contact']"
+          >Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Email and Phone Info -->
+    <div class="email-info">
+      <i class="fa fa-envelope me-2"></i>
+      <a href="mailto:info@example.com" class="email-info"
+        >info@pacode.com.pk</a
+      >
+      <p class="white-color"><i class="fa fa-phone me-2 white-color"></i>+92-42-36626502<br><i class="fa fa-phone me-2 white-color"></i>+92 331 1149012</p>
+    </div>
+  </div>
+</nav>

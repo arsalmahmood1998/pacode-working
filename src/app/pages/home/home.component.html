@@ -1,0 +1,226 @@
+<app-navbar></app-navbar>
+<div class="bg-white text-center">
+  <ngb-carousel [showNavigationArrows]="true" [showNavigationIndicators]="true">
+    <ng-template ngbSlide *ngFor="let image of slides" class="slide">
+      <img
+        class="slider-image image-fluid"
+        src="{{ config.imgUrl + image.image }}"
+        alt=""
+      />
+      <div class="carousel-caption">
+        <!-- <h3>{{ image.image_heading }}</h3>
+        <p>{{ image.image_para }}</p> -->
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <div class="text-center background p-4">
+    <h3>
+      Welcome to Pacode Systems – Your Gateway to Cutting-edge Coding, Marking,
+      and Labelling Solutions
+    </h3>
+  </div>
+  <div class="container-fluid text-center p-5">
+    <div class="row mt-3">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+        <h4 class="mb-3 mt-3"><strong>Markoprint integra One</strong></h4>
+        <img
+          class="img-fluid image-height"
+          src="assets/images/integra-one.png"
+          alt=""
+        />
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+        <h4 class="mb-3 mt-3"><strong>Markoprint X1JET HP Stitch</strong></h4>
+        <img
+          class="img-fluid image-height"
+          src="assets/images/handstich.png"
+          alt=""
+        />
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+        <h4 class="mb-3 mt-3"><strong>Markoprint X2JET / X4JET</strong></h4>
+        <img
+          class="img-fluid image-height"
+          src="assets/images/x2jet.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container-fluid p-5">
+    <img
+      class="img-fluid"
+      src="assets/images/Kennzeichnungsgeraete-Gruppe-01.jpg-41158.jpg"
+      alt=""
+    />
+  </div> -->
+  <div class="p-3">
+    <h5>
+      At Pacode Systems, we are dedicated to revolutionizing the way you code,
+      mark, and label your products. Pacode Systems is designed to welcome you
+      to a world where precision meets innovation. Explore the latest
+      advancements in coding technology, discover efficient marking solutions,
+      and unlock the potential of seamless labelling. Pacode Systems is not just
+      a company; it&#39;s your partner in progress, committed to elevating your
+      operations to new heights.
+    </h5>
+  </div>
+
+  <div class="container text-center p-3 mt-5">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+        <h4 class="mb-3"><strong>Markoprint X1JET HP Standard</strong></h4>
+        <img
+          class="img-fluid image-height"
+          src="assets/images/x1jet.png"
+          alt=""
+        />
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+        <h2 class="bold-font">Explore Our Range of Solutions:</h2>
+        <ul class="mt-5">
+          <li style="font-size: large">
+            <strong>Inkjet Printers:</strong> High-resolution inkjet printers
+            for crisp, clear coding and marking on a variety of substrates
+          </li>
+          <li style="font-size: large">
+            <strong>Laser Marking Systems:</strong> Precision laser systems for
+            permanent, high-contrast marking on metals, plastics, and more.
+          </li>
+          <li style="font-size: large">
+            <strong>Coding Consumables:</strong> A comprehensive range of coding
+            inks, ribbons, and labels to meet your specific application
+            requirements
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="container text-center p-5">
+      <h2 class="bold-font">Areas of Application</h2>
+      <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let image of images">
+          <img class="slider-image image-fluid" src="{{ image }}" alt="" />
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <div class="container text-center p-5">
+      <!-- <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <img
+          class="img-fluid"
+          style="height: 30rem"
+          src="assets/images/1025.jpg"
+          alt=""
+        />
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <img
+          class="img-fluid"
+          style="height: 30rem"
+          src="assets/images/10252.jpg"
+          alt=""
+        />
+        </div>
+      </div> -->
+      <div class="container text-center p-5">
+        <h2 class="bold-font">Partner with Pacode Systems Today:</h2>
+        <h5 class="mt-2">
+          Join countless businesses worldwide who trust Pacode Systems for their
+          coding, marking, and labeling needs. Whether you&#39;re looking to
+          improve traceability, comply with regulatory standards, or enhance
+          brand visibility, we have the expertise and technology to help you
+          achieve your goals. Contact us today to learn more about our solutions
+          and how we can support your success.
+        </h5>
+      </div>
+    </div>
+    <div class="container text-center p-3">
+      <img
+        class="img-fluid image-height"
+        src="assets/images/10253.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <div class="pt-2 nav-background">
+        <mat-grid-list
+          [cols]="breakpoint"
+          rowHeight="2:1"
+          (window:resize)="onResize($event)"
+          gutterSize="10px"
+          style="height: 100px"
+        >
+          <mat-grid-tile class="card mb-5">
+            <mat-card>
+              <h3>{{ comapnyInfo.experience }}+</h3>
+              <h6>Years of Experience</h6>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile class="card mb-1">
+            <mat-card>
+              <h3>{{ comapnyInfo.installed_systems }}+</h3>
+              <h6>Installed Systems</h6>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </div>
+    <div>
+      <div class="pt-2 text-center mb-3 mt-5">
+        <h1 class="bold-font">Support</h1>
+        <mat-grid-list
+          [cols]="breakpointTwo"
+          rowHeight="2:1"
+          (window:resize)="onResizeTwo($event)"
+          gutterSize="10px"
+          style="height: 100px"
+        >
+          <mat-grid-tile class="card mb-1" style="padding: 2em">
+            <mat-card>
+              <h4>Lahore</h4>
+              <img
+                class="img-fluid city p-2"
+                src="assets/images/minar.png"
+                alt=""
+              />
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile class="card mb-1" style="padding: 2em">
+            <mat-card>
+              <h4>Islamabad</h4>
+              <img
+                class="img-fluid city p-2"
+                src="assets/images/mosque.png"
+                alt=""
+              />
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile class="card mb-1" style="padding: 2em">
+            <mat-card>
+              <h4>Karachi</h4>
+              <img
+                class="img-fluid city p-2"
+                src="assets/images/tomb.png"
+                alt=""
+              />
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile class="card mb-1" style="padding: 2em">
+            <mat-card>
+              <h4>Peshawar</h4>
+              <img
+                class="img-fluid city p-2"
+                src="assets/images/khyber.jpg"
+                alt=""
+              />
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

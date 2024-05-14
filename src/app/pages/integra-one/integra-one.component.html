@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<!-- <div class="labeling-banner slider-image slider-height centered">
+  <h2>{{product.name}}</h2>
+  <h4>Inkjet printer Markoprint integra One / {{product.name}}</h4>
+</div> -->
+
+<div class="bg-white">
+  <div class="row w-100 p-5">
+      <div class="text-center" style="background-color: white">
+        <img class="marko" src="assets/images/markoprint.png" alt="" />
+        <img class="hp-size" src="assets/images/hp-class.png" alt="" />
+      </div>
+      <div class="row mt-5">
+        <h2>{{product.name}}</h2>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3" *ngIf="product.image_one">
+          <img class="img-fluid max-height contain" src="{{config.imgUrl + product.image_one}}" alt="" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3" *ngIf="product.image_two">
+          <img class="img-fluid max-height contain" src="{{config.imgUrl + product.image_two}}" alt="" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3  mt-3" *ngIf="product.image_three">
+          <img class="img-fluid max-height contain" src="{{config.imgUrl + product.image_three}}" alt="" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3" *ngIf="product.image_four">
+          <img class="img-fluid max-height contain" src="{{config.imgUrl + product.image_four}}" alt="" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3" *ngIf="product.image_five">
+          <img class="img-fluid max-height contain" src="{{config.imgUrl + product.image_five}}" alt="" />
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" [ngStyle]="{'display': (showbtn) ? 'none' : 'block'}">
+          <h4>Brochure:</h4>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
+          <strong [ngStyle]="{'display': (showbtn) ? 'none' : 'block'}"> <a id="pdf_link"
+              class="btn btn-outline-danger" target="_blank">
+              <i class="fa fa-file-pdf-o" style="font-size:40px;color:red"></i> Brochure.pdf</a>
+          </strong>
+        </div>
+      </div>
+      <div class="mt-5" *ngIf="product.description">
+        <div [innerHTML]="product.description" ></div>
+      </div>
+      <div class="mt-5" *ngIf="product.specifications">
+        <div [innerHTML]="product.specifications" class="overflow-horizontal"></div>
+      </div>
+      <div class="mt-5" *ngIf="product.configuration">
+        <div [innerHTML]="product.configuration" class="overflow-horizontal"></div>
+      </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,33 @@
+
+
+.sub-btn{
+  background-color: #cc3333;
+  color: white;
+  border-radius: 10px;
+  border-color: #cc3333;
+}
+.slider-height{
+  height: 60vh;
+}
+.about-banner{
+  position: relative;
+  background-image: url("/assets/images/home-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.centered h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.example-card {
+  height: 15em;
+}
+.img{
+  height: 4em;
+  width: 100%;
+  object-fit: contain;
+}

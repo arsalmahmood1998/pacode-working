@@ -1,0 +1,189 @@
+<app-navbar></app-navbar>
+<div
+  [style.background-image]="'url(' + imgUrl + ')'"
+  class="labeling-banner slider-image slider-height centered"
+  style="background-repeat: no-repeat; background-size: cover"
+>
+  <h2>{{ this.slideName }} {{ slides.image_heading }}</h2>
+  <h4>{{ slides.image_para }}</h4>
+</div>
+<div class="bg-white p-5">
+  <h5>
+    Our labeling systems will automatically label your products and packagings
+    of all kinds. Weber Marking Systems manufactures efficient labelers to meet
+    the most stringent demands of logistics and industry. We also develop
+    customised solutions for specific print-apply applications. Please contact
+    us for personal consultation!
+  </h5>
+
+  <div class="bg-white container text-center">
+    <img [src]="brand" alt="Responsive Image" class="responsive-image" />
+  </div>
+
+  <div class="container p-2 text-center mt-5">
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search products..."
+        [(ngModel)]="searchTerm"
+        (input)="filterProducts()"
+      />
+    </div>
+
+    <!-- <h2>
+      Pacode Systems labeling machines for industry and logistics
+      applications:
+    </h2> -->
+    <div class="row mt-5" *ngIf="categories != 'No Data Found'">
+      <div
+        class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1"
+        *ngFor="let category of filteredData"
+      >
+        <div class="card p-4 cursor" (click)="goToProducts(category.id)">
+          <img
+            src="{{ config.imgUrl + category.image }}"
+            class="img-fluid example-card"
+            alt="Image"
+          />
+          <div class="card-body hover">
+            <h3>
+              {{ category.name }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5" *ngIf="categories == 'No Data Found'">
+      <h2>No Products found</h2>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <h2>Features of our labeling systems:</h2>
+    <h5>
+      Be it shaped square, round, oval or conical: our labeling machines will
+      label almost any product. This includes also flexible containers, cartons,
+      bags, packages, trays and pallets. We offer solutions for all sizes and
+      surfaces – from glass, wood and plastic via paper and to steel. We can
+      also meet the following challenges your industry is posing:
+    </h5>
+  </div>
+
+  <div class="row mt-5">
+    <div
+      class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mt-3"
+      *ngFor="let category of features"
+    >
+      <div class="card text-center">
+        <h5>{{ category.image_name }}</h5>
+        <img
+          class="example-card img-fluid"
+          src="{{ config.imgUrl + category.image }}"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <h2>
+        Made in Germany: Labeling machine manufacturer Weber Marking Systems
+      </h2>
+    </div>
+
+    <div class="card mt-5">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img
+            src="assets/images/labeling1.png"
+            class="card-img img-fluid"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <p class="card-text">
+              Our labeling technology is made in Germany: We develop, build and
+              produce all the labeling systems in our own competency centre in
+              Rheinbreitbach (Rhineland-Palatinate). We work together closely
+              with our customers and partners to meet highest market demands as
+              they develop. The experience we gained over many years allows us
+              to handle all product sizes, shapes and surfaces at all production
+              rates.
+            </p>
+            <p class="card-text">
+              This is based mainly on our modular designs comprising dispensing
+              and printing modules, label winders and unwinders and a large
+              number of special applicators. The systems produce labels that are
+              compliant with EU directives. They offer high print quality, good
+              legibility and speeds up to 600 labels per minute. Our machines
+              will label sensitive materials without making contact, yet
+              accurately positioned.
+            </p>
+            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img
+            src="assets/images/labeling2.png"
+            class="card-img img-fluid"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <p class="card-text">
+              Rough production conditions such as cold, heat, moisture and dust
+              are typically found in industry. Our systems are particularly
+              robust and can also be designed with suitable protective
+              enclosures.
+            </p>
+            <p class="card-text">
+              We will also offer special machine designs to meet highly specific
+              demands. The modular design of our Geset labeling machines allows
+              us to react flexibly to individual requests whilst also using
+              standard modules. You therefore stand to benefit from maximum
+              economy based on short planning and delivery times. In addition to
+              this, we provide labeling systems such as the Tamper Evident
+              machine to help you comply with safety requirements and prevent
+              counterfeiting.
+            </p>
+            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <h2>Accessories for labeling systems</h2>
+    <h5>
+      Pacode Systems will supply consumables and supplementary products for
+      efficient labelling:
+    </h5>
+    <div class="row mt-5">
+      <div
+        class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1"
+        *ngFor="let item of accessories"
+      >
+        <div class="card p-4">
+          <img
+            src="{{ config.imgUrl + item.image }}"
+            class="img-fluid example-card"
+            alt="Image"
+          />
+          <div class="card-body">
+            <h3>
+              {{ item.image_heading }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

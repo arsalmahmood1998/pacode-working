@@ -1,0 +1,126 @@
+
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Dark shadow color */
+  background-color: #313131 !important;
+  border: 1px solid #313131 !important;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+mat-grid-list {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.example-card {
+  height: 5em;
+  width: 100%;
+  object-fit: contain;
+}
+
+.card-image{
+  height: 10em;
+  width: 100%;
+  object-fit: contain;
+}
+
+.example {
+  height: 30%;
+  width: 50%;
+  padding-left: 3rem;
+}
+
+.banner {
+  height: 300px;
+}
+
+.carousel-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.carousel-caption h3, .carousel-caption p {
+  text-align: center;
+}
+.size{
+  width: 150px;;
+  height: 150px;
+  object-fit: contain;
+}
+
+.city{
+  max-height: 12em;
+  background-color: white;
+}
+
+.clients{
+  background-color: #313131;
+  color: white;
+}
+
+.slide{
+  flex: 0 0 auto;
+}
+.carousel-indicators li{
+  background-color: #f00 !important;
+}
+
+.slider-image-area{
+  height: 30em;
+  width: 65em;
+  object-fit: contain;
+}
+
+.dull-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Adjust the opacity as needed */
+  z-index: 1050; /* Ensure it's above the default modal backdrop (1040) */
+}
+
+.dropdown-item:hover {
+  background-color: #cc3333;
+  color: #fff;
+}
+
+.image-height{
+  max-height: 25rem;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 600px) {
+  .size{
+    width: 150px;
+    height: 150px;
+  }
+
+  .city{
+    max-height: 8em;
+    background-color: white;
+  }
+
+  .font-size{
+    font-size: 18px;
+  }
+
+  .image-height{
+    max-height: 15rem;
+  }
+}

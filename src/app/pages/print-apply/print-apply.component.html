@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<div
+  [style.background-image]="'url(' + imgUrl + ')'"
+  class="labeling-banner slider-image slider-height centered"
+  style="background-repeat: no-repeat; background-size: cover;"
+>
+  <h2>{{this.slideName}} {{ slides.image_heading }}</h2>
+  <h4>{{ slides.image_para }}</h4>
+</div>
+<div class="bg-white p-5">
+  <h5>
+    Print-and-apply labeling systems combine a label printer and a label
+    dispenser in one single machine. Our label printer applicators will
+    automatically print and apply labels to your products, cartons or pallets –
+    in one single process. Since each production process is customised, we use a
+    clever modular system to guarantee you the optimal labeling solution that
+    meets your specific demands. Contact us for a free expert consultation!
+  </h5>
+  <div class=" bg-white container text-center">
+    <img [src]="brand" alt="Responsive Image" class="responsive-image">
+  </div>
+  <div class="text-center mt-5">
+    <h2>Our label printer and applicators:</h2>
+  </div>
+  <div class="container p-2 text-center mt-5">
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search products..."
+        [(ngModel)]="searchTerm"
+        (input)="filterProducts()"
+      />
+    </div>
+    <!-- <h2>
+      Pacode Systems labeling machines for industry and logistics
+      applications:
+    </h2> -->
+    <div class="row mt-5" *ngIf="categories != 'No Data Found'">
+      <div
+        class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1"
+        *ngFor="let category of filteredData"
+      >
+        <div class="card p-4 cursor" (click)="goToProductDetail(category.id)">
+          <img
+            src="{{ config.imgUrl + category.main_image }}"
+            class="img-fluid example-card"
+            alt="Image"
+          />
+          <div class="card-body hover">
+            <h3>
+              {{ category.name }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5" *ngIf="categories == 'No Data Found'">
+      <h2>No Products found</h2>
+    </div>
+  </div>
+  <div class="mt-5">
+    <div [innerHTML]="content.description"></div>
+  </div>
+</div>
+<app-footer></app-footer>

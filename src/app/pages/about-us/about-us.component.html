@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+<div class="about-banner slider-image slider-height centered">
+  <h2>About Us</h2>
+</div>
+<div class="bg-white">
+  <div class="p-5">
+    <h2>{{ content.title }}</h2>
+    <div [innerHTML]="content.description"></div>
+
+    <div class="row text-center p-5">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1">
+        <div class="card-white">
+          <img
+            src="assets/images/mission.png"
+            class="img-fluid img mt-2"
+            alt="Image"
+          />
+          <h2 class="mt-2">Mission</h2>
+          <p class="mt-2">
+            At Pacode, our mission is to revolutionize product identification
+            and traceability through innovative coding and labeling solutions.
+            We are committed to empowering businesses across industries with
+            cutting-edge technology, ensuring accuracy, efficiency, and
+            compliance. By delivering high-quality coding and labeling machines
+            coupled with exceptional service and support, we enable our clients
+            to streamline their operations, enhance brand reputation, and drive
+            sustainable growth in an ever-evolving marketplace. Our dedication
+            to excellence, continuous improvement, and customer satisfaction
+            fuels our passion to be the premier choice for coding and labeling
+            solutions worldwide.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1">
+        <div class="card-white">
+          <img
+            src="assets/images/vision.png"
+            class="img-fluid img mt-2"
+            alt="Image"
+          />
+          <h2 class="mt-2">Vision</h2>
+          <p class="mt-2">
+            Empowering businesses worldwide with seamless, intelligent, and
+            sustainable coding and labeling solutions, Pacode envisioxns
+            a future where product identification and traceability are not only
+            efficient but also transformative. Our vision is to be the catalyst
+            for innovation, driving the evolution of industry standards and
+            practices. By leveraging advanced technology and fostering
+            collaborative partnerships, we aim to create a global ecosystem
+            where every product carries a digital footprint, enabling
+            transparency, accountability, and consumer trust. Through our
+            unwavering commitment to excellence and sustainability, we aspire to
+            be the cornerstone of progress, shaping a world where quality,
+            safety, and efficiency converge seamlessly.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1">
+        <div class="card-white">
+          <img
+            src="assets/images/goals.png"
+            class="img-fluid img mt-2"
+            alt="Image"
+          />
+          <h2 class="mt-2">Goals</h2>
+          <ul class="mt-2">
+            <li><strong>Innovation:</strong> Continuously research and develop new technologies to improve the efficiency, accuracy, and versatility of coding and labeling machines.</li>
+            <li><strong>Customer Satisfaction:</strong> Maintain a high level of customer satisfaction by providing exceptional service, support, and training to ensure clients maximize the benefits of our products.</li>
+            <li><strong>Market Expansion:</strong> Expand our presence in existing markets while exploring new opportunities in emerging industries and geographic regions.</li>
+            <li><strong>Product Quality:</strong> Ensure the highest standards of quality in our coding and labeling machines, meeting or exceeding industry regulations and customer expectations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- <h1 class="mt-5 text-center">Our Team</h1>
+    <div class="row text-center">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pt-4" *ngFor="let team of team">
+        <mat-card>
+          <img class="example-card contain" mat-card-image src="{{config.imgUrl + team.image}}" alt="" />
+          <mat-card-content>
+            <h3>{{team.name}}</h3>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div
+  [style.background-image]="'url(' + imgUrl + ')'"
+  class="labeling-banner slider-image slider-height centered"
+  style="background-repeat: no-repeat; background-size: cover;"
+>
+  <h2>{{ slides.image_heading }}</h2>
+  <h4>{{ slides.image_para }}</h4>
+</div>
+<div class="bg-white p-5">
+  <div class="container p-2 text-center mt-5">
+    <h1>{{ category.name }}</h1>
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search products..."
+        [(ngModel)]="searchTerm"
+        (input)="filterProducts()"
+      />
+    </div>
+    <div class="row mt-5" *ngIf="categories != 'No Data Found'">
+      <div
+        class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-1"
+        *ngFor="let category of filteredData"
+      >
+      <div class="card p-4 cursor" (click)="goToProducts(category.id)">
+        <img
+          src="{{ config.imgUrl + category.main_image }}"
+          class="img-fluid example-card"
+          alt="Image"
+        />
+        <div class="card-body hover">
+          <h3>
+            {{ category.name }}
+          </h3>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row mt-5" *ngIf="categories == 'No Data Found'">
+      <h2>No Products found</h2>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
