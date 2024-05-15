@@ -27,14 +27,17 @@ export class HomeComponent implements AfterViewInit {
   public images:any = 
   [
     '../../../assets/images/area-nineteen.jpg',
+    '../../../assets/images/area-twenty-one.png',
     '../../../assets/images/area-one.jpg',
     '../../../assets/images/area-five.png',
     '../../../assets/images/area-eight.png',
+    '../../../assets/images/area-twenty-two.png',
     '../../../assets/images/area-ten.png',
     '../../../assets/images/area-twenty.jpg',
     '../../../assets/images/area-twelve.png',
     '../../../assets/images/area-thirteen.png',
     '../../../assets/images/area-fourteen.png',
+    '../../../assets/images/area-twenty-three.png',
     '../../../assets/images/area-fifteen.png',
     '../../../assets/images/area-seventeen.png',
     '../../../assets/images/area-eighteen.png',

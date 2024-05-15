@@ -107,24 +107,6 @@
       </ngb-carousel>
     </div>
     <div class="container text-center p-5">
-      <!-- <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <img
-          class="img-fluid"
-          style="height: 30rem"
-          src="assets/images/1025.jpg"
-          alt=""
-        />
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <img
-          class="img-fluid"
-          style="height: 30rem"
-          src="assets/images/10252.jpg"
-          alt=""
-        />
-        </div>
-      </div> -->
       <div class="container text-center p-5">
         <h2 class="bold-font">Partner with Pacode Systems Today:</h2>
         <h5 class="mt-2">
@@ -136,22 +118,37 @@
           and how we can support your success.
         </h5>
       </div>
+      <div class="row">
+        <div class="text-center">
+          <img class="img-fluid" src="assets/images/10252.jpg" alt="" />
+        </div>
+      </div>
     </div>
-    <div class="container text-center p-3">
-      <img
-        class="img-fluid image-height"
-        src="assets/images/10253.jpg"
-        alt=""
-      />
+    <div class="container text-center p-5">
+      <h2 class="bold-font">Brands We Represent</h2>
+      <div class="row text-center">
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3"
+          *ngFor="let printer of printers"
+        >
+          <div class="card-white p-5">
+            <img
+              src="{{ config.imgUrl + printer.image }}"
+              class="img-fluid example-card"
+              alt="Image"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <div class="pt-2 nav-background">
+    <!-- <div>
+      <div class="p-2 nav-background">
         <mat-grid-list
           [cols]="breakpoint"
           rowHeight="2:1"
           (window:resize)="onResize($event)"
           gutterSize="10px"
-          style="height: 100px"
+          style="width: 50%"
         >
           <mat-grid-tile class="card mb-5">
             <mat-card>
@@ -166,6 +163,22 @@
             </mat-card>
           </mat-grid-tile>
         </mat-grid-list>
+      </div>
+    </div> -->
+    <div class="container text-center p-5">
+      <div class="row text-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3">
+          <div class="card p-5">
+            <h3>{{ comapnyInfo.experience }}+</h3>
+            <h6>Years of Experience</h6>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3">
+          <div class="card p-5">
+            <h3>{{ comapnyInfo.installed_systems }}+</h3>
+            <h6>Installed Systems</h6>
+          </div>
+        </div>
       </div>
     </div>
     <div>
